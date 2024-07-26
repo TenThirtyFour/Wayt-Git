@@ -21,7 +21,7 @@ const Header = () => {
       <div className="wrapper flex items-center justify-between p-4">
         <Link href="/" className="w-36">
           <Image 
-            src="/assets/images/WaytLogo.png" 
+            src="/WaytLogo.png" 
             width={128} 
             height={38} 
             alt="Wayt logo" 
