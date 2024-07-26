@@ -4,6 +4,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import Header from "@/components/shared/header";
+
 export const metadata: Metadata = {
   title: "Wayt",
   description: "What's Around Your Town?",
