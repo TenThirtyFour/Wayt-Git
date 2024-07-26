@@ -16,12 +16,13 @@ const Header = () => {
           />
         </Link>
         
-        <SignedIn>
-          <nav className="md:flex hidden w-full max-w-xs justify-between">
+        <nav className="md:flex hidden w-full max-w-xs justify-between">
             <Link href="/events" className="nav-link">Events</Link>
             <Link href="/about" className="nav-link">About</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
           </nav>
+        
+        <SignedIn>
         </SignedIn>
 
         <div className="flex w-32 justify-end gap-3">
