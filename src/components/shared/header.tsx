@@ -12,7 +12,7 @@ const Header = () => {
             src="/assets/images/logo.svg" 
             width={128} 
             height={38} 
-            alt="Evently logo" 
+            alt="Wayt logo" 
           />
         </Link>
         
