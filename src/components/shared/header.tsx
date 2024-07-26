@@ -54,7 +54,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           {mounted && <ModeToggle />}
           <Button asChild className="rounded-full" size="lg">
-            <Link href="/eventform">Submit a Form</Link>
+            <Link href="/submit-event">Submit an Event</Link>
           </Button>
           <SignedIn>
             <UserButton />
