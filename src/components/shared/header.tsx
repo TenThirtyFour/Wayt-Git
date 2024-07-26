@@ -15,11 +15,10 @@ const Header = () => {
             alt="Wayt logo" 
           />
         </Link>
-        
+
         <nav className="md:flex hidden w-full max-w-xs justify-between">
-            <Link href="/events" className="nav-link">Events</Link>
-            <Link href="/about" className="nav-link">About</Link>
-            <Link href="/contact" className="nav-link">Contact</Link>
+            <Link href="../events" className="nav-link">Events</Link>
+            <Link href="../venues" className="nav-link">Venues</Link>
           </nav>
         
         <SignedIn>
@@ -27,7 +26,7 @@ const Header = () => {
 
         <div className="flex w-32 justify-end gap-3">
           <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+            <UserButton/>
           </SignedIn>
           <SignedOut>
             <Button asChild className="rounded-full" size="lg">
