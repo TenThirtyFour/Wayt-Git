@@ -1,3 +1,22 @@
+## From events.json
+
+# Categories
+Music
+Art
+Technology
+Sports
+Food
+Education
+
+# Locations
+New York
+Los Angeles
+Chicago
+Houston
+Phoenix
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,0 +1,303 @@
+[
+    {
+      "_id": "Wayt-123456789",
+      "eventName": "Event 1",
+      "venueName": "The Grand Hall",
+      "eventDate": "2024-08-15T00:00:00.000Z",
+      "eventTime": "18:00",
+      "imageUrl": "/images/event_1.jpg",
+      "location": "New York",
+      "category": "Music"
+    },
+    {
+      "_id": "Wayt-987654321",
+      "eventName": "Event 2",
+      "venueName": "Open Air Arena",
+      "eventDate": "2024-09-20T00:00:00.000Z",
+      "eventTime": "20:30",
+      "imageUrl": "/images/event_2.jpg",
+      "location": "Los Angeles",
+      "category": "Art"
+    },
+    {
+      "_id": "Wayt-456789123",
+      "eventName": "Event 3",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2024-10-10T00:00:00.000Z",
+      "eventTime": "09:00",
+      "imageUrl": "/images/event_3.jpg",
+      "location": "Chicago",
+      "category": "Technology"
+    },
+    {
+      "_id": "Wayt-789123456",
+      "eventName": "Event 4",
+      "venueName": "City Park",
+      "eventDate": "2024-11-05T00:00:00.000Z",
+      "eventTime": "14:00",
+      "imageUrl": "/images/event_4.jpg",
+      "location": "Houston",
+      "category": "Sports"
+    },
+    {
+      "_id": "Wayt-321654987",
+      "eventName": "Event 5",
+      "venueName": "The Beachfront",
+      "eventDate": "2024-12-25T00:00:00.000Z",
+      "eventTime": "19:00",
+      "imageUrl": "/images/event_5.jpg",
+      "location": "Phoenix",
+      "category": "Food"
+    },
+    {
+      "_id": "Wayt-654987321",
+      "eventName": "Event 6",
+      "venueName": "The Grand Hall",
+      "eventDate": "2025-01-15T00:00:00.000Z",
+      "eventTime": "12:00",
+      "imageUrl": "/images/event_6.jpg",
+      "location": "New York",
+      "category": "Education"
+    },
+    {
+      "_id": "Wayt-147258369",
+      "eventName": "Event 7",
+      "venueName": "Open Air Arena",
+      "eventDate": "2025-02-20T00:00:00.000Z",
+      "eventTime": "15:00",
+      "imageUrl": "/images/event_7.jpg",
+      "location": "Los Angeles",
+      "category": "Music"
+    },
+    {
+      "_id": "Wayt-963852741",
+      "eventName": "Event 8",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2025-03-10T00:00:00.000Z",
+      "eventTime": "10:00",
+      "imageUrl": "/images/event_8.jpg",
+      "location": "Chicago",
+      "category": "Art"
+    },
+    {
+      "_id": "Wayt-852741963",
+      "eventName": "Event 9",
+      "venueName": "City Park",
+      "eventDate": "2025-04-05T00:00:00.000Z",
+      "eventTime": "16:00",
+      "imageUrl": "/images/event_9.jpg",
+      "location": "Houston",
+      "category": "Technology"
+    },
+    {
+      "_id": "Wayt-741963852",
+      "eventName": "Event 10",
+      "venueName": "The Beachfront",
+      "eventDate": "2025-05-25T00:00:00.000Z",
+      "eventTime": "20:00",
+      "imageUrl": "/images/event_10.jpg",
+      "location": "Phoenix",
+      "category": "Sports"
+    },
+    {
+      "_id": "Wayt-963741852",
+      "eventName": "Event 11",
+      "venueName": "The Grand Hall",
+      "eventDate": "2025-06-15T00:00:00.000Z",
+      "eventTime": "14:00",
+      "imageUrl": "/images/event_11.jpg",
+      "location": "New York",
+      "category": "Food"
+    },
+    {
+      "_id": "Wayt-258369147",
+      "eventName": "Event 12",
+      "venueName": "Open Air Arena",
+      "eventDate": "2025-07-20T00:00:00.000Z",
+      "eventTime": "18:30",
+      "imageUrl": "/images/event_12.jpg",
+      "location": "Los Angeles",
+      "category": "Education"
+    },
+    {
+      "_id": "Wayt-159753486",
+      "eventName": "Event 13",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2025-08-10T00:00:00.000Z",
+      "eventTime": "11:00",
+      "imageUrl": "/images/event_13.jpg",
+      "location": "Chicago",
+      "category": "Music"
+    },
+    {
+      "_id": "Wayt-486159753",
+      "eventName": "Event 14",
+      "venueName": "City Park",
+      "eventDate": "2025-09-05T00:00:00.000Z",
+      "eventTime": "17:00",
+      "imageUrl": "/images/event_14.jpg",
+      "location": "Houston",
+      "category": "Art"
+    },
+    {
+      "_id": "Wayt-753486159",
+      "eventName": "Event 15",
+      "venueName": "The Beachfront",
+      "eventDate": "2025-10-25T00:00:00.000Z",
+      "eventTime": "21:00",
+      "imageUrl": "/images/event_15.jpg",
+      "location": "Phoenix",
+      "category": "Technology"
+    },
+    {
+      "_id": "Wayt-321987654",
+      "eventName": "Event 16",
+      "venueName": "The Grand Hall",
+      "eventDate": "2025-11-15T00:00:00.000Z",
+      "eventTime": "13:00",
+      "imageUrl": "/images/event_16.jpg",
+      "location": "New York",
+      "category": "Sports"
+    },
+    {
+      "_id": "Wayt-987321654",
+      "eventName": "Event 17",
+      "venueName": "Open Air Arena",
+      "eventDate": "2025-12-20T00:00:00.000Z",
+      "eventTime": "16:30",
+      "imageUrl": "/images/event_17.jpg",
+      "location": "Los Angeles",
+      "category": "Food"
+    },
+    {
+      "_id": "Wayt-654321987",
+      "eventName": "Event 18",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2026-01-10T00:00:00.000Z",
+      "eventTime": "12:00",
+      "imageUrl": "/images/event_18.jpg",
+      "location": "Chicago",
+      "category": "Education"
+    },
+    {
+      "_id": "Wayt-147369258",
+      "eventName": "Event 19",
+      "venueName": "City Park",
+      "eventDate": "2026-02-05T00:00:00.000Z",
+      "eventTime": "15:00",
+      "imageUrl": "/images/event_19.jpg",
+      "location": "Houston",
+      "category": "Music"
+    },
+    {
+      "_id": "Wayt-963258741",
+      "eventName": "Event 20",
+      "venueName": "The Beachfront",
+      "eventDate": "2026-03-25T00:00:00.000Z",
+      "eventTime": "19:30",
+      "imageUrl": "/images/event_20.jpg",
+      "location": "Phoenix",
+      "category": "Art"
+    },
+    {
+      "_id": "Wayt-741852963",
+      "eventName": "Event 21",
+      "venueName": "The Grand Hall",
+      "eventDate": "2026-04-15T00:00:00.000Z",
+      "eventTime": "18:00",
+      "imageUrl": "/images/event_21.jpg",
+      "location": "New York",
+      "category": "Technology"
+    },
+    {
+      "_id": "Wayt-852963741",
+      "eventName": "Event 22",
+      "venueName": "Open Air Arena",
+      "eventDate": "2026-05-20T00:00:00.000Z",
+      "eventTime": "20:30",
+      "imageUrl": "/images/event_22.jpg",
+      "location": "Los Angeles",
+      "category": "Sports"
+    },
+    {
+      "_id": "Wayt-963741852",
+      "eventName": "Event 23",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2026-06-10T00:00:00.000Z",
+      "eventTime": "09:00",
+      "imageUrl": "/images/event_23.jpg",
+      "location": "Chicago",
+      "category": "Food"
+    },
+    {
+      "_id": "Wayt-321654987",
+      "eventName": "Event 24",
+      "venueName": "City Park",
+      "eventDate": "2026-07-05T00:00:00.000Z",
+      "eventTime": "14:00",
+      "imageUrl": "/images/event_24.jpg",
+      "location": "Houston",
+      "category": "Education"
+    },
+    {
+      "_id": "Wayt-654987321",
+      "eventName": "Event 25",
+      "venueName": "The Beachfront",
+      "eventDate": "2026-08-25T00:00:00.000Z",
+      "eventTime": "19:00",
+      "imageUrl": "/images/event_25.jpg",
+      "location": "Phoenix",
+      "category": "Music"
+    },
+    {
+      "_id": "Wayt-147258369",
+      "eventName": "Event 26",
+      "venueName": "The Grand Hall",
+      "eventDate": "2026-09-15T00:00:00.000Z",
+      "eventTime": "12:00",
+      "imageUrl": "/images/event_26.jpg",
+      "location": "New York",
+      "category": "Art"
+    },
+    {
+      "_id": "Wayt-963852741",
+      "eventName": "Event 27",
+      "venueName": "Open Air Arena",
+      "eventDate": "2026-10-20T00:00:00.000Z",
+      "eventTime": "15:00",
+      "imageUrl": "/images/event_27.jpg",
+      "location": "Los Angeles",
+      "category": "Technology"
+    },
+    {
+      "_id": "Wayt-852741963",
+      "eventName": "Event 28",
+      "venueName": "Downtown Conference Center",
+      "eventDate": "2026-11-10T00:00:00.000Z",
+      "eventTime": "10:00",
+      "imageUrl": "/images/event_28.jpg",
+      "location": "Chicago",
+      "category": "Sports"
+    },
+    {
+      "_id": "Wayt-741963852",
+      "eventName": "Event 29",
+      "venueName": "City Park",
+      "eventDate": "2026-12-05T00:00:00.000Z",
+      "eventTime": "16:00",
+      "imageUrl": "/images/event_29.jpg",
+      "location": "Houston",
+      "category": "Food"
+    },
+    {
+      "_id": "Wayt-963741852",
+      "eventName": "Event 30",
+      "venueName": "The Beachfront",
+      "eventDate": "2027-01-25T00:00:00.000Z",
+      "eventTime": "20:00",
+      "imageUrl": "/images/event_30.jpg",
+      "location": "Phoenix",
+      "category": "Education"
+    }
+  ]
+  
