@@ -7,6 +7,12 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -29,13 +35,27 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex w-full max-w-xs justify-between">
-          <Link href="/events" className="nav-link">Events</Link>
-          <Link href="/venues" className="nav-link">Venues</Link>
-        </nav>
+        <NavigationMenu>
+          <NavigationMenuList className="flex w-full max-w-xs justify-between">
+            <NavigationMenuItem>
+              <Link href="/events" passHref>
+                <NavigationMenuLink className="nav-link">Events</NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <span className="mx-4"></span> {/* Adds a bigger gap */}
+            <NavigationMenuItem>
+              <Link href="/venues" passHref>
+                <NavigationMenuLink className="nav-link">Venues</NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
 
         <div className="flex items-center space-x-3">
           {mounted && <ModeToggle />}
+          <Button asChild className="rounded-full" size="lg">
+            <Link href="/eventform">Submit a Form</Link>
+          </Button>
           <SignedIn>
             <UserButton />
           </SignedIn>
