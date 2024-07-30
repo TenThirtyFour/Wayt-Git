@@ -25,6 +25,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+import axios from "axios";
+
 // Update form schema to include a date field
 const formSchema = z.object({
   eventname: z.string().min(2).max(50),
@@ -53,8 +55,21 @@ export default function Home() {
 
   // Define a submit handler
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    // Send data to backend
+    axios.post('http://localhost:5000/submit-form', values)
+      .then(response => {
+        console.log('Data saved:', response.data);
+      })
+      .catch(error => {
+        console.error('Error saving data:', error);
+      });
   }
+
+  React.useEffect(() => {
+    form.setValue("eventdate", date);
+  }, [date, form]);
+
+
 
   return (
     <main className="flex min-h-screen items-center justify-center p-6">
