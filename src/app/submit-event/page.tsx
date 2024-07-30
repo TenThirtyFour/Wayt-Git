@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -13,7 +13,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
+} from "@/components/ui/form";
 
 const formSchema = z.object({
   eventname: z.string().min(2).max(50),
@@ -21,7 +21,7 @@ const formSchema = z.object({
   email: z.string().email().min(2).max(50),
   phonenumber: z.string().min(2).max(50),
   venueaddress: z.string().min(2).max(50),
-})
+});
 
 export default function Home() {
   // 1. Define your form.
@@ -34,32 +34,35 @@ export default function Home() {
       phonenumber: "",
       venueaddress: "",
     },
-  })
+  });
   
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    console.log(values);
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-24">
-      <div className="w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">Submit an Event</h1>
+    <main className="flex min-h-screen items-center justify-center p-6">
+      <div className="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+        <h1 className="text-3xl font-semibold mb-6 text-center text-gray-700">Submit an Event</h1>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-8 rounded-lg shadow-md">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="eventname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Event Name:</FormLabel>
+                  <FormLabel className="text-gray-600">Event Name:</FormLabel>
                   <FormControl>
-                    <Input placeholder="Name of event..." {...field} />
+                    <Input
+                      placeholder="Name of the event"
+                      {...field}
+                      className="border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+                    />
                   </FormControl>
-                  
-                  <FormMessage />
+                  <FormMessage className="text-red-500 text-sm" />
                 </FormItem>
               )}
             />
@@ -69,12 +72,15 @@ export default function Home() {
               name="venuename"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Venue Name:</FormLabel>
+                  <FormLabel className="text-gray-600">Venue Name:</FormLabel>
                   <FormControl>
-                    <Input placeholder="Name of the venue..." {...field} />
+                    <Input
+                      placeholder="Name of the venue"
+                      {...field}
+                      className="border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+                    />
                   </FormControl>
-                  
-                  <FormMessage />
+                  <FormMessage className="text-red-500 text-sm" />
                 </FormItem>
               )}
             />
@@ -84,12 +90,15 @@ export default function Home() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email:</FormLabel>
+                  <FormLabel className="text-gray-600">Email:</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your email address..." {...field} />
+                    <Input
+                      placeholder="Your email address"
+                      {...field}
+                      className="border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+                    />
                   </FormControl>
-                  
-                  <FormMessage />
+                  <FormMessage className="text-red-500 text-sm" />
                 </FormItem>
               )}
             />
@@ -99,12 +108,15 @@ export default function Home() {
               name="phonenumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number:</FormLabel>
+                  <FormLabel className="text-gray-600">Phone Number:</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your phone number..." {...field} />
+                    <Input
+                      placeholder="Your phone number"
+                      {...field}
+                      className="border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+                    />
                   </FormControl>
-                  
-                  <FormMessage />
+                  <FormMessage className="text-red-500 text-sm" />
                 </FormItem>
               )}
             />
@@ -114,17 +126,22 @@ export default function Home() {
               name="venueaddress"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Venue Address:</FormLabel>
+                  <FormLabel className="text-gray-600">Venue Address:</FormLabel>
                   <FormControl>
-                    <Input placeholder="Address of the venue..." {...field} />
+                    <Input
+                      placeholder="Address of the venue"
+                      {...field}
+                      className="border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+                    />
                   </FormControl>
-                  
-                  <FormMessage />
+                  <FormMessage className="text-red-500 text-sm" />
                 </FormItem>
               )}
             />
             
-            <Button type="submit" className="w-full">Submit</Button>
+            <Button type="submit" className="w-full py-3 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600">
+              Submit
+            </Button>
           </form>
         </Form>
       </div>
