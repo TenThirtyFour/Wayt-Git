@@ -14,14 +14,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 
 const formSchema = z.object({
   eventname: z.string().min(2).max(50),
@@ -52,109 +44,89 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-      <Card>
-        <CardHeader>
-          <CardTitle>Event Submission Form</CardTitle>
-          <CardDescription>Please fill out the following form to submit a new event.</CardDescription>
-        </CardHeader>
-        <CardContent>
-       
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <FormField
-                control={form.control}
-                name="eventname"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Event Name:</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Name of event..." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      Enter the name of the event.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="venuename"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Venue Name:</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Name of the venue..." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      Enter the name of the venue.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email:</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your email address..." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      Enter your email address.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="phonenumber"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Phone Number:</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your phone number..." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      Enter your phone number.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="venueaddress"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Venue Address:</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Address of the venue..." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      Enter the address of the venue.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <Button type="submit">Submit</Button>
-            </form>
-          </Form>
-          </CardContent>
-          
-          </Card>
-        
+    <main className="flex min-h-screen items-center justify-center p-24">
+      <div className="w-full max-w-md">
+        <h1 className="text-2xl font-bold mb-4 text-center">Submit an Event</h1>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-8 rounded-lg shadow-md">
+            <FormField
+              control={form.control}
+              name="eventname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Event Name:</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Name of event..." {...field} />
+                  </FormControl>
+                  
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="venuename"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Venue Name:</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Name of the venue..." {...field} />
+                  </FormControl>
+                  
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email:</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Your email address..." {...field} />
+                  </FormControl>
+                  
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="phonenumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number:</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Your phone number..." {...field} />
+                  </FormControl>
+                  
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="venueaddress"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Venue Address:</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Address of the venue..." {...field} />
+                  </FormControl>
+                  
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <Button type="submit" className="w-full">Submit</Button>
+          </form>
+        </Form>
       </div>
     </main>
   );
