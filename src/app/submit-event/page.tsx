@@ -5,6 +5,16 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import * as React from "react";
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Form,
   FormControl,
@@ -15,16 +25,20 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+// Update form schema to include a date field
 const formSchema = z.object({
   eventname: z.string().min(2).max(50),
   venuename: z.string().min(2).max(50),
   email: z.string().email().min(2).max(50),
   phonenumber: z.string().min(2).max(50),
   venueaddress: z.string().min(2).max(50),
+  eventdate: z.date().optional(),  // Added date field
 });
 
 export default function Home() {
-  // 1. Define your form.
+  const [date, setDate] = React.useState<Date | undefined>();
+
+  // Define your form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,13 +47,12 @@ export default function Home() {
       email: "",
       phonenumber: "",
       venueaddress: "",
+      eventdate: undefined,  // Default value for date
     },
   });
-  
-  // 2. Define a submit handler.
+
+  // Define a submit handler
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
   }
 
@@ -66,7 +79,7 @@ export default function Home() {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="venuename"
@@ -84,7 +97,7 @@ export default function Home() {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="email"
@@ -102,7 +115,7 @@ export default function Home() {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="phonenumber"
@@ -120,7 +133,7 @@ export default function Home() {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="venueaddress"
@@ -138,7 +151,42 @@ export default function Home() {
                 </FormItem>
               )}
             />
-            
+
+            <FormField
+              control={form.control}
+              name="eventdate"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-gray-600">Event Date:</FormLabel>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant={"outline"}
+                        className={cn(
+                          "w-[280px] justify-start text-left font-normal",
+                          !date && "text-muted-foreground"
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {date ? format(date, "PPP") : <span>Pick a date</span>}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0">
+                      <Calendar
+                        mode="single"
+                        selected={date}
+                        onSelect={(selectedDate) => {
+                          setDate(selectedDate);
+                          field.onChange(selectedDate);
+                        }}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
+                </FormItem>
+              )}
+            />
+
             <Button type="submit" className="w-full py-3 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600">
               Submit
             </Button>
